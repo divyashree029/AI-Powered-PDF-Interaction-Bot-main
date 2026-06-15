@@ -21,7 +21,6 @@ greenlet==3.5.1
 langchain-google-genai==0.0.11
 google-generativeai==0.4.1
 h11==0.16.0
-hf-xet==1.1.10
 httpcore==1.0.9
 httpx==0.28.1
 idna==3.18
@@ -43,7 +42,6 @@ marshmallow==3.26.1
 mpmath==1.3.0
 multidict==6.7.1
 mypy_extensions==1.1.0
-networkx==3.5
 numpy==1.26.4
 openai==1.30.5
 orjson==3.11.3
@@ -53,7 +51,6 @@ pillow==10.4.0
 propcache==0.5.2
 protobuf==4.25.9
 pyarrow==21.0.0
-pydantic==2.7.4
 pydeck==0.9.1
 Pygments==2.20.0
 PyPDF2==3.0.1
@@ -71,10 +68,8 @@ smmap==5.0.2
 sniffio==1.3.1
 SQLAlchemy==2.0.50
 streamlit==1.35.0
-sympy==1.14.0
 tenacity==8.5.0
 threadpoolctl==3.6.0
-tiktoken==0.7.0
 toml==0.10.2
 tqdm==4.68.2
 typing-inspect==0.9.0
