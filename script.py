@@ -1,4 +1,5 @@
 import streamlit as st
+st.write("APP STARTED SUCCESSFULLY")
 from PyPDF2 import PdfReader
 
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -63,7 +64,7 @@ def get_text_chunks(text):
 def get_vector_store(text_chunks):
 
     embeddings = GoogleGenerativeAIEmbeddings(
-        model="models/text-embedding-004",
+        model="models/embedding-001",
         google_api_key=os.getenv("GOOGLE_API_KEY")
     )
 
