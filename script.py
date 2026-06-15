@@ -1,5 +1,4 @@
 import streamlit as st
-st.write("APP STARTED SUCCESSFULLY")
 from PyPDF2 import PdfReader
 
 from langchain.text_splitter import RecursiveCharacterTextSplitter
