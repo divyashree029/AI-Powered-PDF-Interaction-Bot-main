@@ -77,3 +77,4 @@ urllib3==2.7.0
 watchdog==6.0.0
 yarl==1.24.2
 cohere==5.17.0
+langchain-cohere==0.1.5

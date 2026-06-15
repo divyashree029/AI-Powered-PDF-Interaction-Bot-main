@@ -6,7 +6,7 @@ from langchain_community.vectorstores import FAISS
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 from langchain_openai import ChatOpenAI
-
+from langchain_cohere import CohereEmbeddings
 
 # ==========================
 # OPENROUTER CONFIG
@@ -61,23 +61,17 @@ def get_text_chunks(text):
 
 def get_vector_store(text_chunks):
 
-    co = cohere.Client(os.getenv("COHERE_API_KEY"))
-
-    response = co.embed(
-        texts=text_chunks,
-        model="embed-english-v3.0",
-        input_type="search_document"
+    embeddings = CohereEmbeddings(
+        cohere_api_key=os.getenv("COHERE_API_KEY"),
+        model="embed-english-v3.0"
     )
 
-    embeddings = response.embeddings
-
-    vector_store = FAISS.from_embeddings(
-        text_embeddings=list(zip(text_chunks, embeddings)),
-        embedding=None
+    vector_store = FAISS.from_texts(
+        texts=text_chunks,
+        embedding=embeddings
     )
 
     return vector_store
-
 
 # ==========================
 # LLM CHAIN
