@@ -93,7 +93,7 @@ def get_conversational_chain(vector_store):
 
     llm = ChatOpenAI(
         model="google/gemini-2.5-flash",
-        api_key=OPENROUTER_API_KEY,
+        openai_api_key=OPENROUTER_API_KEY,
         base_url="https://openrouter.ai/api/v1",
         temperature=0,
         max_tokens=512
