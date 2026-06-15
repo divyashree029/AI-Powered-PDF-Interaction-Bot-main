@@ -1,6 +1,6 @@
 import streamlit as st
 from PyPDF2 import PdfReader
-
+import cohere
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
@@ -62,15 +62,24 @@ def get_text_chunks(text):
 
 def get_vector_store(text_chunks):
 
-    embeddings = OpenAIEmbeddings(
-        model="text-embedding-3-small",
-        api_key=os.getenv("OPENROUTER_API_KEY"),
-        base_url="https://openrouter.ai/api/v1"
-    )
+    co = cohere.Client(os.getenv("COHERE_API_KEY"))
 
-    vector_store = FAISS.from_texts(
-        texts=text_chunks,
-        embedding=embeddings
+    embeddings = []
+
+    for chunk in text_chunks:
+        response = co.embed(
+            texts=[chunk],
+            model="embed-english-v3.0",
+            input_type="search_document"
+        )
+        embeddings.append(response.embeddings[0])
+
+    import faiss
+    import numpy as np
+
+    vector_store = FAISS.from_embeddings(
+        text_embeddings=list(zip(text_chunks, embeddings)),
+        embedding=None
     )
 
     return vector_store
