@@ -16,10 +16,6 @@ Dive into the world of conversation and discovery with our enchanting Chatbot Bl
 2. Pose your questions in the sacred text input.
 3. Share your ancient scrolls (PDFs) for Bliss to decipher and respond with wisdom.
 
-## Join the Fellowship 🤝✨
-
-Embark on a magical journey by contributing your insights to our enchanted realm. Feel free to cast your spells through issues or pull requests.
-
 ## A Grimoire of Thanks 🙏📖
 
 Gratitude to the enchanters who helped bring Bliss to life.
