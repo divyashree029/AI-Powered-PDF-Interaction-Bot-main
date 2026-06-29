@@ -47,6 +47,9 @@ An intelligent chatbot that enables users to interact with PDF documents using N
 ## 📷 Preview
 
 <img width="1912" height="792" alt="image" src="https://github.com/user-attachments/assets/bf896e72-2924-4d22-bdca-b3ab40e1a4fd" />
+<img width="515" height="628" alt="image" src="https://github.com/user-attachments/assets/a5ec1eed-3edf-4ea6-a29e-3a3f803f197a" />
+<img width="1652" height="488" alt="image" src="https://github.com/user-attachments/assets/afbe549b-e9dc-490c-9449-fda4754513d5" />
+
 
 ---
 
