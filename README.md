@@ -19,7 +19,7 @@ An intelligent chatbot that enables users to interact with PDF documents using N
 
 * **Frontend:** Streamlit
 * **Backend:** Python
-* **LLM:** Google Gemini / Google PaLM *(Update based on the model you're currently using)*
+* **LLM:** Google Gemini / Google PaLM 
 * **Embeddings:** Google Generative AI Embeddings
 * **Vector Database:** FAISS
 * **PDF Processing:** PyPDF2
